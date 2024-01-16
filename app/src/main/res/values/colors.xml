@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF000000</color>
+    <color name="backgroundPrimary">#f3f6f9</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#E25E3E</color>
+    <color name="gray">#A3A3A3</color>
+    <color name="dark_gray">#A3A3A3</color>
+    <color name="light_gray">#DFDFDF</color>
+    <color name="blue">#07A3FB</color>
+    <color name="dark_blue">#0082CB</color>
+    <color name="yellow">#E2AB4A</color>
+
+    <color name="blue_sleep">#4D5971</color>
+
+    <!--MENU MEAL    -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="grey_100">#F0F0F0</color>
+    <color name="red_100">#FF0000</color>
+    <color name="yellow_100">#FBAD5F</color>
+    <color name="blue_100">#60DDF3</color>
+    <color name="blue_200">#00B2FF</color>
+    <color name="grey_200">#757575</color>
+    <color name="water_100">#36D2FF</color>
+    <color name="green">#5EBD30</color>
+
+
+
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorSecondary">#1845E6</color>
+    <color name="colorSecondaryDark">#4167B2</color>
+    <color name="colorSecondaryLight">#6A91DE</color>
+    <color name="colorSecondaryLighter">#ABBDEC</color>
+    <color name="colorWhite">#F7F9F8</color>
+    <color name="colorBlack">#090909</color>
+    <color name="colorSkyBlue">#A0A5F4</color>
+    <color name="grey">#A5A3A3</color>
+    <color name="red">#D80101</color>
+    <color name="dividerColor">#F5F5F5</color>
+    <color name="colorAccent">#8E02CA</color>
+    <color name="toggleButtonBg">#7B1FA2</color>
+
+</resources>

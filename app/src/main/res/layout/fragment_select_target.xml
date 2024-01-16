@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SelectTargetFragment">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:alignItems="center"
+        app:flexDirection="column">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:flexDirection="column">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/sliderTarget"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:alignItems="center"
+                app:flexDirection="row"
+                app:justifyContent="center"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp">
+                <RadioGroup
+                    android:id="@+id/radioGroupTarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:checkedButton="@id/rdMale">
+
+                    <RadioButton
+                        android:id="@+id/rd1"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/radio_flat_selector"
+                        android:textColor="@drawable/text_radio_selector"
+                        android:button="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="Xây dựng cơ bắp"
+                        android:textAlignment="center" />
+                    <RadioButton
+                        android:id="@+id/rd2"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/radio_flat_selector"
+                        android:textColor="@drawable/text_radio_selector"
+                        android:button="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="Lấy lại vóc dáng"
+                        android:textAlignment="center" />
+                    <RadioButton
+                        android:id="@+id/rd3"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/radio_flat_selector"
+                        android:textColor="@drawable/text_radio_selector"
+                        android:button="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="Duy trì sức khỏe"
+                        android:textAlignment="center"/>
+                </RadioGroup>
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Tiếp tục" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+</FrameLayout>

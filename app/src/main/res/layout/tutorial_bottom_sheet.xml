@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    app:behavior_hideable="true"
+
+    app:behavior_peekHeight="100dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.TopRadius"
+        app:strokeWidth="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                        android:id="@+id/video_tutorial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:alignContent="center"
+                        app:alignItems="center"
+                        app:flexDirection="column">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bật nhảy"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvTurorial"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Bước 1: Đứng thẳng thoải mái, chân khép, hai tay đặt xuối theo 2 bên cơ thể, bụng hóp
+                                 \nBước 2: Nhún người và bật nhảy càng cao càng tốt, đồng thời dang 2 chân ra 2 bên một khoảng bằng chiều rộng của hông, 2 tay giơ vung lên cao phía trên đầu và gần chạm vào nhau
+                                \nBước 3: Tiếp đất nhẹ nhàng. Bật nhảy về tư thế ban đầu." />
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:alignContent="center"
+                        app:alignItems="center"
+                        app:flexDirection="column">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Đánh dấu cơ bắp"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/gymbg" />
+                    </com.google.android.flexbox.FlexboxLayout>
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="20dp"
+                        app:alignContent="center"
+                        app:alignItems="center"
+                        app:flexDirection="column">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Vùng cơ tập trung"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:alignContent="center"
+                            app:alignItems="center"
+                            app:flexDirection="row"
+                            app:flexWrap="wrap">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="20dp"
+                                android:backgroundTint="@color/light_gray"
+                                android:text="Vai"
+                                android:textColor="@color/black"
+                                app:icon="@drawable/baseline_lens_24"
+                                app:iconPadding="0dp"
+                                app:iconSize="12dp"
+                                app:iconTint="@color/orange" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/light_gray"
+                                android:text="Cơ đùi trớc"
+                                android:textColor="@color/black"
+                                app:icon="@drawable/baseline_lens_24"
+                                app:iconPadding="3dp"
+                                app:iconSize="12dp"
+                                app:iconTint="@color/gray" />
+                        </com.google.android.flexbox.FlexboxLayout>
+                    </com.google.android.flexbox.FlexboxLayout>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </ScrollView>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="5dp"
+                app:flexWrap="nowrap">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    app:alignItems="center"
+                    app:alignContent="center"
+                    app:justifyContent="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPreviousTut"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        app:icon="@drawable/leftarrow"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="12dp"
+                        app:iconTint="@color/gray"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/light_gray"
+                        app:backgroundTint="@color/white"  />
+
+                    <TextView
+                        android:id="@+id/tvNumTut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:textColor="@color/gray"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnNextTut"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:insetLeft="0dp"
+                        android:insetTop="0dp"
+                        android:insetRight="0dp"
+                        android:insetBottom="0dp"
+                        app:icon="@drawable/rightarrow"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="12dp"
+                        app:iconTint="@color/gray"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/light_gray"
+                        app:backgroundTint="@color/white"
+                        />
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClose"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/gradient_bg_color"
+                    android:padding="0dp"
+                    android:text="Đóng"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+            </com.google.android.flexbox.FlexboxLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

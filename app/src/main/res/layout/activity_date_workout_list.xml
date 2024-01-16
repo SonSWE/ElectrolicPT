@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateWorkoutListActivity"
+    android:background="@color/white">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:alignContent="center"
+        app:alignItems="center"
+        app:flexDirection="column">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.BottomRadius"
+            app:strokeWidth="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                tools:ignore="ContentDescription">
+
+                <ImageView
+                    android:id="@+id/ivThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/gymbg" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.6"
+                    android:background="@color/black" />
+            </FrameLayout>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                app:alignContent="center"
+                app:alignItems="center"
+                app:flexDirection="column"
+                app:justifyContent="flex_end">
+
+                <TextView
+                    android:id="@+id/tvLessonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            app:alignContent="center"
+            app:alignItems="center">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:elevation="0dp"
+            app:cardBackgroundColor="@color/light_gray"
+            app:cardCornerRadius="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </androidx.cardview.widget.CardView>
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/thumbnail"
+        android:layout_marginBottom="80dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDate"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="0dp"
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            android:orientation="vertical"
+            tools:itemCount="5"
+            app:spanCount="5"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/day_item" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/gradient_bg_color"
+            android:padding="0dp"
+            android:text="Tập ngay"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+    </com.google.android.flexbox.FlexboxLayout>
+</RelativeLayout>

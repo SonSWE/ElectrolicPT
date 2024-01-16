@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PhoneNumberFragment"
+    android:background="@color/white">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flexDirection="column"
+        app:alignItems="center"
+        android:padding="20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:src="@drawable/phone_number_img" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đăng ký"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/orange"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vui lòng nhập số điện thoại để đăng ký tài khoản"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gray"/>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <com.fredporciuncula.phonemoji.PhonemojiFlagTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                app:phonemoji_flagFor="@id/txtPhoneNumber"
+                />
+            <com.fredporciuncula.phonemoji.PhonemojiTextInputEditText
+                android:id="@+id/txtPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:phonemoji_initialRegionCode="VN"
+                />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiếp tục"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+    </com.google.android.flexbox.FlexboxLayout>
+
+</FrameLayout>

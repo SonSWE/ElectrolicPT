@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".OtpConfirmFragment"
+    android:background="@color/white">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexDirection="column"
+        app:alignItems="center"
+        android:padding="20dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/opt_confirm" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xác minh OTP"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/orange"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hãy nhập mã OTP được gửi đến số điện thoại của bạn"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gray"/>
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0867822410"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"/>
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinview"
+            app:itemCount="6"
+            app:itemWidth="50dp"
+            app:itemHeight="50dp"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:itemBackground="@color/white"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:cursorVisible="true"
+            app:hideLineWhenFilled="false"
+            app:itemRadius="10dp"
+            style="@style/PinWidget.PinView"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            ></com.chaos.view.PinView>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:justifyContent="flex_end">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResendOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lấy lại mã"
+                android:textColor="@color/dark_gray"
+                style="@style/ThemeOverlay.Material3.Button.TextButton"
+                android:backgroundTint="@color/white"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:visibility="gone"/>
+        </com.google.android.flexbox.FlexboxLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tiếp tục"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"/>
+    </com.google.android.flexbox.FlexboxLayout>
+
+</FrameLayout>

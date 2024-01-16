@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ExerciseListActivity">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignContent="center"
+            app:alignItems="center"
+            app:flexDirection="column">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="0dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MaterialCardView.BottomRadius"
+                app:strokeWidth="0dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    tools:ignore="ContentDescription">
+
+                    <ImageView
+                        android:id="@+id/ivThumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gymbg" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.6"
+                        android:background="@color/black" />
+                </FrameLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    app:alignContent="center"
+                    app:alignItems="center"
+                    app:flexDirection="column"
+                    app:justifyContent="flex_end">
+
+                    <TextView
+                        android:id="@+id/tvLessonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="24dp"
+                        android:textStyle="bold" />
+                </com.google.android.flexbox.FlexboxLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:alignContent="center"
+                app:alignItems="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="20 phút 10 bài tập"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/light_gray"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </androidx.cardview.widget.CardView>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thumbnail"
+            android:layout_marginBottom="80dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp"
+                app:flexDirection="column"
+                app:flexWrap="wrap"
+                app:layoutManager="com.google.android.flexbox.FlexboxLayoutManager"
+                tools:listitem="@layout/exercise_item" />
+
+        </ScrollView>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRestart"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:padding="0dp"
+                android:text="Khởi động lại"
+                android:textAlignment="center"
+                android:textColor="@color/dark_gray"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/layoutBtnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                app:flexDirection="column">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient_bg_color"
+                    android:padding="0dp"
+                    android:text="Tiếp tục"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="24dp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@null" />
+
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="13% đã hoàn thành"
+                    android:textAlignment="center"
+                    android:textSize="16dp" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/gradient_bg_color"
+                android:padding="0dp"
+                android:text="Bắt đầu"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:backgroundTint="@null" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/tutorial_bottom_sheet" />
+
+    <FrameLayout
+        android:id="@+id/full_screen_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

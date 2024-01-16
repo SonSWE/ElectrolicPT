@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        android:layout_marginTop="50dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+
+            <ImageView
+                android:id="@+id/ttc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_water_glass" />
+
+
+
+            <TextView
+                android:id="@+id/waterAmountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="15dp"
+
+                android:layout_toRightOf="@+id/ttc3"
+
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="45dp"
+
+                android:layout_toRightOf="@+id/ttc3"
+                android:text="ml "
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/ttc4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180dp"
+
+                android:paddingHorizontal="3dp"
+                android:text="Hôm nay: "
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold">
+
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/ttc4"
+                android:gravity="start"
+                android:paddingHorizontal="5dp"
+
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textStyle="bold">
+
+
+            </TextView>
+
+            <FrameLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                >
+                <Button
+
+                    android:id="@+id/deleteButton"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/rounded_button_background"
+                    android:padding="5dp"
+                    android:layout_marginBottom="10dp">
+
+                    <!-- Icon in the center -->
+
+
+                </Button>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_close_24"
+                    android:tint="@android:color/white" />
+
+            </FrameLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

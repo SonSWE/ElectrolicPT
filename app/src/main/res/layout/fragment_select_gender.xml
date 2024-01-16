@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SelectGenderFragment">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:alignItems="center"
+        app:flexDirection="column">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignItems="center"
+            app:flexDirection="column">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/sliderGender"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="40dp" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:alignItems="center"
+                app:flexDirection="row"
+                app:justifyContent="center"
+                android:layout_marginTop="10dp">
+                    <RadioGroup
+                        android:id="@+id/radioGroupGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:checkedButton="@id/rdMale">
+
+                        <RadioButton
+                            android:id="@+id/rdMale"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/radio_flat_selector"
+                            android:textColor="@drawable/text_radio_selector"
+                            android:button="@android:color/transparent"
+                            android:gravity="center"
+                            android:text="Nam"
+                            android:textAlignment="center" />
+                        <RadioButton
+                            android:id="@+id/rdFemale"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/radio_flat_selector"
+                            android:textColor="@drawable/text_radio_selector"
+                            android:button="@android:color/transparent"
+                            android:gravity="center"
+                            android:text="Nữ"
+                            android:textAlignment="center" />
+                        <RadioButton
+                            android:id="@+id/rdOther"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/radio_flat_selector"
+                            android:textColor="@drawable/text_radio_selector"
+                            android:button="@android:color/transparent"
+                            android:gravity="center"
+                            android:text="Khác"
+                            android:textAlignment="center"/>
+                    </RadioGroup>
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Tiếp tục" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+</FrameLayout>

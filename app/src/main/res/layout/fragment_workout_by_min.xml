@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkoutByMinFragment">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:alignContent="center"
+        app:alignItems="center"
+        app:flexDirection="column"
+        app:flexWrap="nowrap">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/tvNameExercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="Trống đẩy cao tay"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvClockDown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="00:00"
+                android:textAlignment="center"
+                android:textSize="34dp"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:alignContent="center"
+            app:alignItems="center"
+            app:flexDirection="column">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnStartStop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/gradient_bg_color"
+                android:padding="0dp"
+                android:text="Bắt đầu"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:backgroundTint="@null"
+                app:icon="@drawable/stopico"
+                app:iconGravity="textStart"
+                app:iconPadding="2dp"
+                app:iconSize="20dp" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:alignContent="center"
+                app:alignItems="center"
+                app:flexDirection="row"
+                app:flexWrap="nowrap"
+                app:justifyContent="space_between">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPrevious"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0dp"
+                    android:text=" Quay lại"
+                    android:textColor="@color/gray"
+                    android:textSize="20dp"
+                    android:textStyle="normal"
+                    app:icon="@drawable/baseline_first_page_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/gray"
+                    app:layout_flexBasisPercent="50%" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:elevation="0dp"
+                    app:cardBackgroundColor="@color/light_gray">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnNext"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="0dp"
+                    android:text="Tiếp tục"
+                    android:textColor="@color/gray"
+                    android:textSize="20dp"
+                    android:textStyle="normal"
+                    app:icon="@drawable/baseline_last_page_24"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/gray"
+                    app:layout_flexBasisPercent="50%" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

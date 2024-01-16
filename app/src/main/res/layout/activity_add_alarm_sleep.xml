@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".AddAlarmSleepActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+
+                android:id="@+id/Sleepback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="26dp"
+                app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Thêm báo thức mới"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <ImageView
+
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingHorizontal="26dp"
+                app:srcCompat="@drawable/baseline_menu_24" />
+
+
+        </RelativeLayout>
+
+        <TimePicker
+            android:id="@+id/fragment_createalarm_timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:timePickerMode="clock" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:orientation="horizontal">
+
+
+
+            <ToggleButton
+                android:id="@+id/fragment_createalarm_checkMon"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:textOff="Mon"
+                android:textOn="Mon"
+                android:layout_margin="3dp"
+
+                android:background="@drawable/toggle_bg"/>
+
+            <ToggleButton
+                android:id="@+id/fragment_createalarm_checkTue"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:textOff="Tue"
+                android:textOn="Tue"
+                android:layout_margin="3dp"
+
+                android:background="@drawable/toggle_bg" />
+
+            <ToggleButton
+                android:id="@+id/fragment_createalarm_checkWed"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:textOff="Wed"
+                android:textOn="Wed"
+                android:layout_margin="3dp"
+
+                android:background="@drawable/toggle_bg" />
+
+            <ToggleButton
+                android:id="@+id/fragment_createalarm_checkThu"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:textOff="Thu"
+                android:textOn="Thu"
+                android:layout_margin="3dp"
+
+                android:background="@drawable/toggle_bg"/>
+
+            <ToggleButton
+                android:id="@+id/fragment_createalarm_checkFri"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:textOff="Fri"
+                android:textOn="Fri"
+                android:layout_margin="3dp"
+
+                android:background="@drawable/toggle_bg" />
+
+            <ToggleButton
+                android:id="@+id/fragment_createalarm_checkSat"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:textOff="Sat"
+                android:textOn="Sat"
+                android:layout_margin="3dp"
+
+                android:background="@drawable/toggle_bg"/>
+
+            <ToggleButton
+                android:id="@+id/fragment_createalarm_checkSun"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:textOff="Sun"
+                android:textOn="Sun"
+                android:layout_margin="3dp"
+
+                android:background="@drawable/toggle_bg"/>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/txtHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clipToOutline="true"
+                android:text="Thông báo"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/txtName" />
+
+            <!-- Add your CardViews here -->
+
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Nội dung thông báo"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtHeader"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        >
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/green"
+            android:text="Lưu báo thức"
+            android:textColor="@color/white">
+        </Button>
+
+
+    </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

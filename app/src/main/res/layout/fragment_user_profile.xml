@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UserProfileFragment">
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:alignItems="center"
+        app:flexDirection="column">
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:src="@drawable/enter_password" />-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Cập nhật thông tin cá nhân"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bổ sung thông tin cơ bản giúp chúng tôi phục vụ bạn tốt hơn!"
+            android:textAlignment="center"
+            android:textColor="@color/dark_gray"
+            android:textSize="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:alignItems="center"
+                app:flexDirection="column">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtFullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Họ và tên"
+                    android:inputType="text" />
+<com.google.android.flexbox.FlexboxLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    app:alignItems="center"
+    app:justifyContent="flex_start">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtBirthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ngày sinh"
+        android:inputType="date" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/baseline_calendar_month_24"
+        app:iconTint="@color/black"
+        app:backgroundTint="@color/white"
+        app:iconPadding="0dp"
+        app:iconSize="25dp"
+        android:padding="0dp"
+        android:insetBottom="0dp"
+        android:insetTop="0dp"
+        app:iconGravity="textStart"/>
+</com.google.android.flexbox.FlexboxLayout>
+
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:flexDirection="column">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Chiều cao:"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:alignItems="center"
+                        app:flexDirection="column">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtHeight"
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="0dp"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="cm"
+                                android:textColor="@color/gray"
+                                android:textSize="18dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.kevalpatel2106.rulerpicker.RulerValuePicker
+                            android:id="@+id/pickerHeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/blue"
+                            app:indicator_color="@color/white"
+                            app:indicator_interval="14dp"
+                            app:indicator_width="2dp"
+
+                            app:notch_color="@color/white"
+                            app:ruler_text_size="6sp" />
+                    </com.google.android.flexbox.FlexboxLayout>
+                </com.google.android.flexbox.FlexboxLayout>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:flexDirection="column">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Cân nặng:"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:alignItems="center"
+                        app:flexDirection="column">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="5dp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/txtWeight"
+                                android:layout_width="65dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="0dp"
+                                android:inputType="number"
+                                android:textColor="@color/black"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="kg"
+                                android:textColor="@color/gray"
+                                android:textSize="18dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.kevalpatel2106.rulerpicker.RulerValuePicker
+                            android:id="@+id/pickerWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@color/orange"
+                            app:indicator_color="@color/white"
+                            app:indicator_interval="14dp"
+                            app:indicator_width="2dp"
+
+                            app:notch_color="@color/white"
+                            app:ruler_text_size="6sp" />
+                    </com.google.android.flexbox.FlexboxLayout>
+                </com.google.android.flexbox.FlexboxLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Tiếp tục" />
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+</FrameLayout>

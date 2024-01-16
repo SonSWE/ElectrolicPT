@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/dumbbell"
+        android:title="Tập luyện"  />
+    <item
+        android:id="@+id/mealFragment"
+        android:icon="@drawable/pizza_slice"
+        android:title="Chế độ ăn" />
+    <item
+        android:id="@+id/waterFragment"
+        android:icon="@drawable/water"
+        android:title="Uống nước" />
+    <item
+        android:id="@+id/SleepAlarmFragment"
+        android:icon="@drawable/moon"
+        android:title="Giấc ngủ" />
+
+</menu>

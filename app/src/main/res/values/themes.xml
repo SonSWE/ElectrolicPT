@@ -1,0 +1,100 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.electrolicpt" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/orange</item>
+    </style>
+
+    <style name="Theme.electrolicpt" parent="Base.Theme.electrolicpt" />
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/orange</item>
+        <item name="colorPrimaryDark">@color/orange</item>
+        <item name="colorAccent">@color/orange</item>
+    </style>
+
+    <style name="circle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.BottomRadius" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeBottomLeft">20dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MaterialCardView.TopRadius" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="BackGroundImageView">
+        <item name="android:alpha">1.5</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/gymbg</item>
+    </style>
+
+    <!--    bottom menu-->
+    <style name="Widget.App.BottomNavigationView.custom" parent="Base.Widget.Material3.BottomNavigationView"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <item name="android:background">@drawable/bg_rounded</item>
+        <item name="backgroundTint">@null</item>
+        <item name="elevation">9dp</item>
+
+        <item name="itemActiveIndicatorStyle">
+            @style/Widget.Material3.BottomNavigationView.ActiveIndicator.custom
+        </item>
+
+        <item name="itemTextAppearanceInactive">@style/itemTextAppearanceInactive.custom</item>
+        <item name="itemTextAppearanceActive">@style/itemTextAppearanceActive.custom</item>
+
+        <item name="itemIconSize">24dp</item>
+        <item name="itemIconTint" android:color="@null"/>
+        <item name="itemTextColor" android:color="@null"/>
+        <item name="itemPaddingTop">12dp</item>
+        <item name="itemPaddingBottom">16dp</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Material3.BottomNavigationView.Custom</item>
+        <item name="shapeAppearance">@style/shapeCorner</item>
+    </style>
+
+    <style name="Widget.Material3.BottomNavigationView.ActiveIndicator.custom" parent="">
+        <item name="android:width">64dp</item>
+        <item name="android:height">32dp</item>
+        <item name="marginHorizontal">4dp</item>
+        <item name="shapeAppearance">@style/shapeCorner</item>
+        <item name="android:color">@null</item>
+    </style>
+    <style name="shapeCorner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100dp</item>
+    </style>
+
+    <style name="itemTextAppearanceInactive.custom" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12.5dp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="fontFamily">sans-serif-thin</item>
+    </style>
+    <style name="itemTextAppearanceActive.custom" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">12.5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">sans-serif-thin</item>
+    </style>
+
+    <style name="ThemeOverlay.Material3.BottomNavigationView.Custom" parent="">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+    </style>
+
+
+</resources>

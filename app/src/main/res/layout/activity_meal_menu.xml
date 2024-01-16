@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ExtraText">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Thực đơn hôm nay"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <ImageView
+
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingHorizontal="26dp"
+                    app:srcCompat="@drawable/baseline_menu_24" />
+
+
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+
+                    android:layout_width="351dp"
+                    android:layout_height="175dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/bg_dd"
+                    android:clipToOutline="true"
+                    >
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Hôm nay,"
+                                android:textColor="@color/white"
+                                android:textSize="25dp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="220dp"
+                                android:layout_height="30dp"
+
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+
+                                android:paddingLeft="90dp"
+                                android:text="20/11/2023"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+
+                                android:textStyle="bold">
+
+                            </TextView>
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:paddingHorizontal="26dp"
+
+                                app:srcCompat="@drawable/baseline_calendar_today_24">
+
+                            </ImageView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="bottom">
+
+                            >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Chào mừng, Ninhisme"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginRight="60dp">
+
+
+                            <TextView
+                                android:id="@+id/ttc1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cân nặng: "
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginLeft="5dp"
+
+                                android:layout_toRightOf="@+id/ttc1"
+                                android:text="80kg% "
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold"></TextView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="60dp">
+
+
+                            <TextView
+                                android:id="@+id/ttc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tỉ lệ lượng mỡ cơ thể: "
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/ttc"
+                                android:text="28.2% "
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:id="@+id/ttc3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Khối lượng cơ: "
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginLeft="5dp"
+
+                                android:layout_toRightOf="@+id/ttc3"
+                                android:text="28.2% "
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/ttc4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="220dp"
+
+                                android:paddingHorizontal="3dp"
+                                android:text="Total:"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+
+                            </TextView>
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_alignParentEnd="true"
+                                android:layout_toRightOf="@+id/ttc4"
+                                android:gravity="start"
+                                android:paddingHorizontal="5dp"
+                                android:text="500g"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold">
+
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Uống nước"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"></TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+
+                        android:layout_width="355dp"
+                        android:layout_height="134dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/grey_100"
+                        android:clipToOutline="true">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/item_water"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="2250 ml"
+                                android:textColor="@color/red_100"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+
+                                />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="1"
+                                android:text="Mục tiêu uống nước hàng ngày"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/line_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/line_4"
+                                android:clipToOutline="true" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+
+                                    app:srcCompat="@drawable/baseline_access_time_24"/>
+
+
+
+                                <TextView
+                                    android:id="@+id/textNext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Lần cuối uống:"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="21:17"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+
+                                    app:srcCompat="@drawable/baseline_notifications_active_24">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:id="@+id/notificationDis"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Disable notification"
+                                    android:textColor="@color/yellow_100"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txAlarm"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:textColor="@color/yellow_100"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Thực đơn các bữa ăn"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/grey_100"
+                        android:clipToOutline="true">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Bữa sáng: "
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="80dp"
+                                    app:srcCompat="@drawable/baseline_access_alarm_24">
+
+                                </ImageView>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="100dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="7:00"
+                                    android:textColor="@color/grey_200"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/detailMeal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Chi tiết bữa ăn"
+                                    android:textColor="@color/green"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                >
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerViewFoodMor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+
+                                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                            </ScrollView>
+
+
+
+
+                            <View
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/line_4"
+                                android:clipToOutline="true" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp">
+
+
+                                <TextView
+                                    android:id="@+id/ttc5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="180dp"
+
+                                    android:paddingHorizontal="3dp"
+                                    android:text="Total:"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/totalFoodMor"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_toRightOf="@+id/ttc5"
+                                    android:gravity="start"
+                                    android:paddingHorizontal="5dp"
+
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_toRightOf="@+id/ttc5"
+                                    android:gravity="end"
+                                    android:paddingHorizontal="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Kcal"
+                                    android:textColor="@color/grey"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/grey_100"
+                        android:clipToOutline="true">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Bữa trưa: "
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="80dp"
+                                    app:srcCompat="@drawable/baseline_access_alarm_24">
+
+                                </ImageView>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="100dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="11:30"
+                                    android:textColor="@color/grey_200"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/detailMealLunch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Chi tiết bữa ăn"
+                                    android:textColor="@color/green"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                >
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerViewFoodLun"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+
+                                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                            </ScrollView>
+
+
+
+
+                            <View
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/line_4"
+                                android:clipToOutline="true" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp">
+
+
+                                <TextView
+                                    android:id="@+id/ttc5Lunch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="180dp"
+
+                                    android:paddingHorizontal="3dp"
+                                    android:text="Total:"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/totalFoodLunch"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_toRightOf="@+id/ttc5Lunch"
+                                    android:gravity="start"
+                                    android:paddingHorizontal="5dp"
+
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_toRightOf="@+id/ttc5Lunch"
+                                    android:gravity="end"
+                                    android:paddingHorizontal="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Kcal"
+                                    android:textColor="@color/grey"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/grey_100"
+                        android:clipToOutline="true">
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Bữa tối: "
+                                    android:textColor="@color/black"
+                                    android:textSize="16dp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="80dp"
+                                    app:srcCompat="@drawable/baseline_access_alarm_24">
+
+                                </ImageView>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="100dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="19:00"
+                                    android:textColor="@color/grey_200"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/detailMealNight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="2dp"
+                                    android:text="Chi tiết bữa ăn"
+                                    android:textColor="@color/green"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" />
+                            </RelativeLayout>
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                >
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerViewFoodNight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+
+                                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                            </ScrollView>
+
+
+
+
+                            <View
+
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@drawable/line_4"
+                                android:clipToOutline="true" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp">
+
+
+                                <TextView
+                                    android:id="@+id/ttc5Night"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="180dp"
+
+                                    android:paddingHorizontal="3dp"
+                                    android:text="Total:"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/totalFoodNight"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_toRightOf="@+id/ttc5Night"
+                                    android:gravity="start"
+                                    android:paddingHorizontal="5dp"
+
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_toRightOf="@+id/ttc5Night"
+                                    android:gravity="end"
+                                    android:paddingHorizontal="10dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:text="Kcal"
+                                    android:textColor="@color/grey"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold">
+
+
+                                </TextView>
+
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

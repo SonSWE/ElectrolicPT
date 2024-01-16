@@ -1,0 +1,21 @@
+<!-- rounded_button_background.xml -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!-- Background color of the rounded button -->
+    <solid android:color="#FFFF" /> <!-- You can change the color as per your requirement -->
+
+    <!-- Border color and width (optional) -->
+    <stroke
+        android:color="#FFFFFF"
+        android:width="2dp" />
+
+    <!-- Padding for the content inside the button -->
+    <padding
+        android:left="16dp"
+        android:top="16dp"
+        android:right="16dp"
+        android:bottom="16dp" />
+
+</shape>

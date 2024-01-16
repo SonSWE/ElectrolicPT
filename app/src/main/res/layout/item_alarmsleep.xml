@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        android:backgroundTint="@color/blue_sleep">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            >
+                <ImageView
+                    android:id="@+id/imgaddSleep"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+
+                    android:clipToOutline="true"
+                    />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/notificationText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="Đi ngủ"
+                        android:textSize="20dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/txthour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="22"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            >
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text=":"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            >
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txtmin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="00"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:layout_marginRight="5dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txtisTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="PM"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:layout_marginRight="5dp">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/numKcal"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:text="22:00"-->
+<!--                        android:textSize="10dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:layout_marginRight="5dp">-->
+
+<!--                    </TextView>-->
+
+<!--                </LinearLayout>-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="end"
+            >
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swStart"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                app:thumbTint="@color/white">
+
+            </com.google.android.material.switchmaterial.SwitchMaterial>
+
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Week"
+            android:textSize="12sp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="37dp"
+            android:layout_gravity="bottom|right"
+            >
+
+        </TextView>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

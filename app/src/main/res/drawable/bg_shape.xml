@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Apply the margin value on the "item" element -->
+    <!-- This example creates a 15dp visible margin around the dialog -->
+    <item
+        android:left="-100dp"
+        android:right="-100dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/blue" />
+            <corners
+                android:bottomLeftRadius="350dp"
+                android:bottomRightRadius="350dp" />
+            <!-- Add attributes specific to your background (e.g. corner radius, colors, etc.) -->
+        </shape>
+    </item>
+</layer-list>

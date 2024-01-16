@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLesson"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardCornerRadius="10dp"
+        tools:ignore="MissingConstraints"
+        android:clickable="true"
+        app:cardElevation="0dp"
+        android:layout_marginBottom="10dp"
+        android:foreground="?attr/selectableItemBackground">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            tools:ignore="ContentDescription">
+
+            <ImageView
+                android:id="@+id/ivLessonThumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/gymbg"
+                android:scaleType="centerCrop"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.6"
+                android:background="@color/black" />
+        </FrameLayout>
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        app:alignContent="flex_start"
+        app:alignItems="center"
+        app:flexDirection="column"
+        app:flexWrap="nowrap">
+
+        <TextView
+            android:id="@+id/tvLessonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thử thách bản thân 7x4"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvLessonDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:text="20 phút ~ 16 bài tập"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="normal" />
+    </com.google.android.flexbox.FlexboxLayout>
+</androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

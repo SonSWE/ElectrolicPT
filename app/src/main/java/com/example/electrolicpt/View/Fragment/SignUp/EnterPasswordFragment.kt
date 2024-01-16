@@ -35,7 +35,7 @@ class EnterPasswordFragment : Fragment() {
                 Toast.makeText(activity, "Mật khẩu nhắc lại không đúng", Toast.LENGTH_SHORT).show()
                 return@OnClickListener
             }
-            activity.user_info.password = CommomFunc().encrypt(password)
+            activity.user_info.password = CommomFunc().encrypt(password).toString().trim()
             val de = CommomFunc().decrypt(activity.user_info.password.toString())
             activity.NextStep()
         })

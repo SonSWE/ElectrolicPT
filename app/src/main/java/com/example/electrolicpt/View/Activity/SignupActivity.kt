@@ -1,7 +1,7 @@
 package com.example.electrolicpt
 
 
-import android.content.Intent
+
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -13,9 +13,9 @@ import com.example.electrolicpt.DataAccess.UserDa
 import com.example.electrolicpt.ObjectInfor.UserInfo
 import com.example.electrolicpt.Utils.LoadingDialog
 import com.example.electrolicpt.adapter.PagerAdapter
-import com.google.android.gms.tasks.Task
+
 import com.google.firebase.FirebaseException
-import com.google.firebase.auth.AuthResult
+
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
@@ -108,7 +108,7 @@ class SignupActivity : AppCompatActivity() {
                         } else {
                             //nếu chưa có user nào tồn tại sđt này thì chuyển sang bước tiếp theo
 
-//                            SendOtp(user_info.phone!!)
+                            SendOtp(user_info.phone!!)
                             NextPage()
                         }
                     }?.addOnFailureListener { e ->

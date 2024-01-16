@@ -17,9 +17,16 @@ import kotlinx.coroutines.runBlocking
 
 
 class LoginActivity : AppCompatActivity() {
+    var userLogin: UserInfo? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        userLogin = UserShareReferentHelper().getUser(this)
+        if (userLogin != null && userLogin?.phone != "") {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
 
         val btnLogin = findViewById<MaterialButton>(R.id.btnLogin)
         btnLogin.setOnClickListener(View.OnClickListener {
